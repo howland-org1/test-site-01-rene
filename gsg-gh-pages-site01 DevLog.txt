@@ -1,0 +1,1034 @@
+gsg-gh-pages-site01 DevLog.txt
+------------------------------
+
+2025-09-17 RJH  
+
+This document is a requirements document and a development log. 
+
+This devlog document was created by Rich Howland for Rene Nel
+for this GitHub repository:  
+  
+  https://github.com/RHowland/gsg-gh-pages-site01.git
+
+This document will be stored in the root directory of this 
+repository.
+
+----------------------------------------------------------------
+The purpose of this project is to create a prototype static 
+website using the Material MkDocs app -- and -- contents from 
+either of these two files: 
+
+  Site Structure with Placeholder files - ChatGPT.txt
+  Site Structure with Placeholder Files - Gemini.txt
+
+These files are located in the repository in this folder: 
+ 
+  ./AI Guide Docs/
+
+  
+(See the Project Introduction section below for more details)
+
+
+================================================================ 
+================================================================
+
+             D E V - L O G    I N T R O D U C T I O N 
+ 
+================================================================
+================================================================
+DevLog Organization:
+--------------------
+There are four PARTS in this document: 
+1) DevLog Introduction
+2) DevLog Instructions     (How to use this document)
+3) Project Specifications  (Proj-requirements, proj-changes, etc)
+4) Live Development Log    (actual log entries)
+
+
+----------------------------------------------------------------
+DevLog Purpose:
+---------------
+The purpose of this devlog document is to serve as a 
+HISTORICAL RECORD of EVERYTHING that the Project Manager 
+and the Technician have done in this project. 
+
+
+----------------------------------------------------------------
+Who will use this document:
+---------------------------
+
+The PROJECT MANAGER will use this document to: 
+- write the project requirements.
+- record project changes (as the project evolves).
+- record all project decisions.
+- add or remove project workitems (as the project evolves)
+- record all payments made on this project.
+- make comments and give directions to the technician.
+
+
+The TECHNICIAN (sysadmin, developer, tester, designer, etc) 
+will use this document to: 
+- record her/his work that is done in each work session.
+- record meetings and time required for meetings.
+- record any problems and solutions or work-arounds.
+- show the completion status of WorkItems in this project.
+- keep a running tally of available prepaid minutes.
+
+
+
+================================================================
+================================================================
+
+             D E V - L O G    I N S T R U C T I O N S 
+ 
+================================================================
+================================================================
+DAILY USE STEPS
+---------------
+
+- In the Project Checklist, get your next WorkItem to work on.
+
+- At the START of EACH work session, CREATE a NEW DEVLOG ENTRY 
+  in the LIVE DEVELOPMENT LOG area (at the end of this document).
+
+- In the new log entry, for each small (5 to 15 minute) job, 
+  add a line to show that you did that small job.  
+
+  If you completed that small job, add "(DONE)" to the end of 
+  that line OR on the next line add: 
+    "- Completed (small job description)." 
+  
+- At the END of each work session, SAVE and COMMIT to the 
+  local Git repository and then PUSH it to GitHub.
+
+- In Upwork, send this message line: 
+
+    Pushed (name of project repo) to GitHub."
+
+  Example: 
+
+    "Pushed haproxy-config-proj01 to GitHub."
+
+
+
+------------------------------------------------------
+DEVLOG-ENTRY HEADINGS
+---------------------
+At the beginning of every devlog entry, 
+insert these heading lines:
+
+DevLogNumber nn
+(today's date) (your name)
+(work-document name if applicable)
+(available prepaid minutes)       <-- from your previous log entry
+
+(See the "Example DevLog Entry" below.)
+
+
+------------------------------------------------------
+DEVLOG NUMBERS
+--------------
+
+Technician numbers
+------------------
+When you, the Technician, create a new DevLog Entry, 
+add 5 to YOUR PREVIOUS DevLogNumber to create the new log 
+entry -- leaving a gap between the numbers.  If YOUR 
+previous DevLogNumber was 175, your next DevLogNumber 
+should be 180.
+
+Project Manager numbers
+-----------------------
+The project manager will number his devlog entries in the 
+GAPS between the technician numbers like this: 
+
+DevLogNumber 100            <-- Technician number
+DevLogNumber 105            <-- Technician number
+DevLogNumber 110            <-- Technician number
+DevLogNumber 112              <-- Project Manager number
+DevLogNumber 115            <-- Technician number
+DevLogNumber 117              <-- Project Manager number
+DevLogNumber 120            <-- Technician number
+
+
+Later, you will enter DevLogNumbers in the Status details.
+So, please do not change a DevLogNumber EXCEPT to correct 
+a clerical error that you made within the last few minutes.  
+
+------------------------------------------------------
+Example DevLog Entry
+--------------------
+Please make your log entries look similar to this example: 
+
+
+(Begin Example DevLog Entry)
+-----------------------------------------
+DevLogNumber 205
+2025-07-10  Dave Smith
+"Build Db01 Server WorkFlow V1C.txt"
+Available Prepaid Minutes:      230
+                                                  <-- leave a blank line for readability
+- started project WorkItem 45 
+- (descriptions of small job that you did) (DONE)
+- (descriptions of small job that you did) (DONE)
+- completed WorkItem 45
+                                                  <-- leave a blank line for readability
+- started project WorkItem 50
+- (descriptions of small job that you did) (DONE)
+- (descriptions of small job that you did) 
+                                                  <-- leave a blank line for readability
+Minutes Worked in this session:  40  
+Remaining Prepaid Minutes     : 190
+
+-----------------------------------------
+(End of Example DevLog Entry) 
+
+
+NOTICE, in the example above, notice that WorkItem 45 is 
+        finished, but WorkItem 50 is not finished. 
+
+
+------------------------------------------------------
+AVAILABLE PREPAID MINUTES
+-------------------------
+When you write the prepaid-minutes line in your devlog 
+entry, for the minutes value, 
+carry forward the "Remaining Prepaid Minutes" NUMBER  
+from the most recent devlog entry.
+
+
+------------------------------------------------------
+PROJECT WORKITEMS CHECKLIST
+---------------------------
+The Project Checklist is a summary list of the WorkItems 
+to be performed in this project. Each item in this section 
+is numbered: 05, 10, 15, etc.  We leave a gap between the 
+numbers so we can enter a new WorkItem in the future.
+
+
+Example PROJECT WORKITEM CHECKLIST:
+-----------------------------------------
+
+  WorkItem 05               (Status:     )
+  Test the "BUILD db01 Workflow V1E.txt" Guide-Doc.
+  -------------------------------------------------
+
+  WorkItem 10               (Status:     )
+  Run Validation App.
+  -------------------
+
+  ...
+
+-----------------------------------------
+(End of Example WorkItem)
+
+
+
+When you have finished each workitem, in the "(Status:     )" 
+space, insert a Status Entry that is similar to one of 
+the following examples: 
+
+Example STATUS Entries:
+-------------------------------
+ (Status: done, success, devlognumber 450)
+
+ (Status: on-hold due to problem, devlognumber 450)
+
+ (Status: on-hold, waiting for new requirements description
+   devlognumber 450)
+
+ (Status: not done, cancelled by Proj Mgr, devlognumber 450)
+
+-------------------------------
+(End of Example Status Entries)
+
+
+ 
+------------------------------------------------------
+PROJECT WORKITEM DETAILS
+------------------------
+This section contains full requirements details about the work to 
+be performed on each workitem. 
+
+Each workitem in this section will have the SAME number as 
+the corresponding workitem in the Project Checklist section.
+
+
+------------------------------------------------------
+(End of Devlog Instructions)
+
+=====================================================================
+=====================================================================
+
+            P R O J E C T   S P E C I F I C A T I O N S
+
+=====================================================================
+=====================================================================
+Project Specs Sections: 
+1) Project Introduction
+2) Project WorkItem Checklist
+3) Project WorkItem Details
+4) Project Changes
+5) Project Decisions
+6) Project Problems and Solutions
+
+=====================================================================
+PROJECT INTRODUCTION
+--------------------
+The purpose of this project is to create a prototype web site 
+using content from either or both of these two documents: 
+
+  Site Structure with Placeholder files - ChatGPT.txt
+  Site Structure with Placeholder Files - Gemini.txt
+
+
+These files are located in the repository in this folder: 
+ 
+  ./AI Guide Docs/
+
+  
+(End of Project Introduction)
+
+=====================================================================
+PROJECT WORKITEM CHECKLIST
+--------------------------
+Please use this checklist to keep track of your progress. 
+
+When you have finished a WorkItem, enter "DONE" or other details 
+into the "(Status:     )" space. 
+
+----------------------
+Begin Project PHASE 01
+----------------------
+
+WorkItem 05               (Status:         )
+Use the provided GitHub repository
+-----------------------------------
+
+
+WorkItem 10               (Status:         )
+Perform a test install of Material MkDocs
+-----------------------------------------
+
+
+WorkItem 15               (Status:         )
+Create and Deploy a Minimal website.
+------------------------------------
+
+
+WorkItem 20               (Status:         )
+Style the Minimal Website. 
+--------------------------
+
+
+WorkItem 25              (Status:          ) 
+Defined the Development WorkFlow steps
+--------------------------------------
+
+
+WorkItem 30              (Status:          ) 
+Document the Development WorkFlow steps
+---------------------------------------
+
+-----------------------
+End of Project PHASE 01
+-----------------------
+
+
+----------------------
+Begin Project PHASE 02
+----------------------
+-----------------------
+End of Project PHASE 02
+-----------------------
+
+
+=====================================================================
+PROJECT WORKITEM DETAILS
+------------------------
+
+This section shows the SAME WORKITEMS that are listed in the 
+Project Checklist.  The WorkItems below have the full details. 
+
+----------------------
+Begin Project PHASE 01
+----------------------
+
+----------------------------------------------------------------
+WorkItem 05
+Use the provided GitHub repository
+----------------------------------
+
+a.
+  Use this GitHub repository for this project. 
+   
+    https://github.com/RHowland/gsg-gh-pages-site01.git
+
+
+----------------------------------------------------------------
+WorkItem 10              
+Perform a test install of Material MkDocs
+-----------------------------------------
+
+a.
+  Follow this document which describes the steps to install 
+  Material MkDocs along with creating a minimal website:
+
+    https://jameswillett.dev/getting-started-with-material-for-mkdocs/
+
+
+b.
+  Here is the Youtube URL for the video that goes with the URL above: 
+
+    YouTube Video URL : https://www.youtube.com/watch?v=xlABhbnNrfI
+
+    YouTube Title: Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal
+
+     
+c. 
+  Please follow this document exactly as shown. 
+
+
+d.
+  Create an abbreviated version of the web page above, with this 
+  document Name: 
+    "GSG-Proc - Install Material MkDocs v1.0.txt"
+
+  I have created a STARTER document in this folder: 
+
+  ./MMkDocs Procedures/GSG-Proc - Install Material MkDocs v1.0.txt
+
+
+e. 
+  When you use this starter document, delete all of the sample 
+  lines that show how to format this document. 
+
+
+----------------------------------------------------------------
+WorkItem 15       
+Create and Deploy a Minimal website.
+------------------------------------
+
+a. 
+  Using the material mkdocs project, 
+  create a minimal website with this name: "gsg-site01".
+
+
+b. 
+  Deploy this website to your personal GitHub account 
+
+
+c. 
+  Deploy this same website to Rich Howland's GitHub account.
+
+
+d.
+  Use the following starter file to document the operations 
+  to:  
+  - create this website
+  - deploy this site to GitHub Pages
+
+  ./MMkDocs Procedures/GSG-Proc - Install Material MkDocs v1.0.txt
+
+
+----------------------------------------------------------------
+WorkItem 20            
+Style the Minimal Website. 
+--------------------------
+
+a. 
+  Follow the following AI guide docs to create a "custom.css" 
+  styles file.
+
+  - "Style Website Pages 01 v1.0 - ChatGpt response.pdf"
+  - "Style Website Pages 01 v1.0 - ChatGpt response.txt"
+
+  - "Style Website Pages 01 v1.0 - Gemini response.pdf"
+  - "Style Website Pages 01 v1.0 - Gemini response.txt"
+
+  These documents contain all of the custom styles. 
+
+  These files are located in this folder: 
+    .AI Guide Docs
+
+   
+----------------------------------------------------------------
+WorkItem 25              
+Defined the Development WorkFlow steps
+--------------------------------------
+
+In DevLogNumber 11, in our Sept 22 meeting, Rene and I defined 
+the following workflow steps to clarify how we will work together:
+
+  - Rene: Will install Material MkDocs app, into the private repo 
+    folders for this project on his his PC.
+
+  - Rene: will make changes to the MMkDocs project folders and files. 
+
+  - Rene: Run "mkdocs serve" to confirm that the recent changes 
+    are working correctly.
+
+  - Rene: Push the private repo up to GitHub for Rich to review it.  
+
+  - Rene: Send an Upwork msg to Rich to tell him the GitHub repo 
+    is ready. 
+
+  - Rich: Will use VSCode to pull the private repo down to his local PC. 
+
+  - Rich: Will enter "mkdocs serve" (in the VSCode terminal panel) and 
+    that will launch the development web server to display all website 
+    pages.
+
+  - Rich: Will review the web pages for accuracy and correctness. 
+
+  - Rich: Will create a devlog entry to report his findings about the 
+    sample web site to Rene.
+
+  - Rich: Will NOT make any changes directly to the code folders or 
+    files in this repo. 
+
+  - Rich will create a number of placeholder CONTENT files (one for 
+    each content page in this website.
+
+  - Rene will copt the content from the placeholder files and will 
+    paste that content into the final website content pages. 
+
+
+----------------------------------------------------------------
+WorkItem 30              
+Document the Development WorkFlow steps
+---------------------------------------
+
+a. 
+  Please document the current development worksteps that 
+  you have learned about.
+
+  Make sure to include the details about the pip freeze command. 
+
+
+b. 
+  Make a copy of this 
+
+-----------------------
+End of Project PHASE 01
+-----------------------
+
+
+
+----------------------
+Begin Project Phase 02
+----------------------
+-----------------------
+End of Project Phase 02
+-----------------------
+
+
+=====================================================================
+PROJECT CHANGES:
+----------------
+
+
+
+=====================================================================
+PROJECT DECISIONS:
+------------------
+
+
+
+=====================================================================
+PROJECT PROBLEMS AND SOLUTIONS:
+-------------------------------
+
+
+
+=====================================================================
+=====================================================================
+
+              L I V E   D E V E L O P M E N T   L O G
+
+=====================================================================
+=====================================================================
+
+---------------------------------------------------------------------
+DevLogNumber 04
+2025-09-17 Rich Howland
+- Available Prepaid Minutes:    0
+- Created an Advance payment, Milestone 01 for 4 hours (240 minutes)
+- Available Prepaid Minutes:  240
+
+Hello Rene, 
+
+Please read the two AI Guide docs and see if you can use the main 
+yml file in Material MkDocs to quickly create a new web site. 
+
+Please log your activities and your time.  
+
+I have not completed these two requirements sections: 
+ - Project WorkItems Checklist
+
+Rene has read and reviewed the ai documents with the placeholder pages
+and was ready to work on them.
+
+Rich decided to not use the ai documents with placeholder pages at this
+time because it is too compicated at this stage of the project. 
+
+---------------------------------------------------------------------
+DevLogNumber 07
+2025-09-18 Rich Howland
+Zoom Meeting Recap
+Start time : 4 pm NY time zone
+Stop time  : 6:40 pm NY time zone
+Billable time: 60 minutes at Rene's request.
+
+- Review the current devlog document. (done)
+- make sure that it is clear to Rene  (done)
+
+- Write up a meeting recap to describe the things   (done)
+  that we should do in Phase 01 and Phase 02. 
+
+- Rich, take the meeting recap details and transfer (done) 
+  them to the Project WorkItem Checklist section in 
+  this document. 
+
+PHASE 01
+
+- Rene: will try to deploy to GitHub pages from the private repo. (done, not successful)
+  - if successful, we will continue with the private repo.
+  - if not successful, we will do our initial dev work using the
+    private repo and later move that finished MMKdocs website to 
+    a public repo
+    - Rich: create a public GitHub repo for Rene to do the 
+      initial MMkDocs install and toy-site deployment
+
+- Rene: Install the MMkDocs app and document the steps to do that. 
+  
+- Rene: Create a toy app.
+
+- Rene: deploy the toy app to Rene's GitHub account. 
+        After the app is deployed... 
+        we will use a NameCheap domain name to confirm that it 
+        will bring up the GitHub pages site properly. 
+
+
+PHASE 02
+
+- Use the private repo that Rich created. 
+
+- Rene: create additional pages with some site styling.  
+        we will gradually work our way towards a professional looking 
+        style theme. 
+
+-----------------------------------------
+- Available Prepaid Minutes:  240
+- billable meeting time    :   60
+- Rema‌ining Prepaid Minutes:  180
+
+
+
+---------------------------------------------------------------------
+DevLogNumber 09
+2025-09-20 Rich Howland
+UPDATED DEVLOG DOCUMENT
+
+- I finished the Project WorkItem Checklist and the 
+  Project WorkItem Details sections in this document.
+
+- created starter documents to be used to document all operations
+  that are needed to use material mkdocs to create and style 
+  a basic website. 
+
+- I created a number of AI documents to provide guidance on how 
+  to style a minimal MkDocs website. 
+
+
+---------------------------------------------------------------------
+DevLogNumber 10
+2025-09-22  Rene Nel
+"Project Phase 01"
+Available Prepaid Minutes:      180
+                                               
+- started project WorkItem 05 
+- (created full access scope Personal Access Token on personal github.com 
+   account to access repo using git from terminal) (DONE)
+- (cloned git url from workitem 05 to get repository on personal computer) (DONE)
+- (updated git repository in terminal on personal computer by using 'git fetch', 
+  'git status', and 'git merge') (DONE)
+- completed WorkItem 05 (DONE, -10 mins)
+
+- started project WorkItem 10 (-20 mins)
+- (Followed steps of jameswillet.dev url in workitem 10 (a)) (DONE)
+- (Screened youtube video in workitem 10 (b)) (DONE)
+- Completed workitem 10 (d) by outlining workitem 10 (a) and workitem 10 
+  (b) steps in "GSG-Proc - Install Material MkDocs v1.0.txt" (DONE)
+- 
+
+- Meeting with Rich             - 60
+
+Minutes Worked in this session: -30 
+Remaining Prepaid Minutes     : 90 
+
+
+---------------------------------------------------------------------
+DevLogNumber 11
+2025-09-22 Rich Howland 
+MEETING RECAP
+- Project status:
+ 
+  Because I did not understand where the GitHub pages were in fact 
+  stored, I decided to write the following project development 
+  workflow steps to clarify who does what and when he does it. 
+
+  - Rene will install Material MkDocs locally, on his PC, in the 
+    private repo for this project. 
+
+  - Rene will make changes to the MMkDocs project folders and files. 
+
+  - Rene will run "mkdocs serve" to confirm that the recent changes 
+    are working correctly.
+
+  - Push the private repo up to GitHub for Rich to review it.  
+
+  - send Upwork msg to Rich to tell him the GitHub repo is ready. 
+
+  - Rich will use VSCode to pull the private repo down to his local PC. 
+
+  - In the VSCode terminal panel, enter "mkdocs serve" and in the 
+    terminal panel, the build operation will show the web url to 
+    copy and paste into a web browser to view the website. 
+
+- Rich will not make any changes directly to the code folders or 
+  files in this repo. 
+
+- Rich will provide to Rene a number of placeholder CONTENT files 
+  (one for each web page in this website).  These files will include 
+   the intermediary pagesthe website structure. 
+  (parent pages and child pages). 
+
+
+Rich: put these changes and Ideas into the Project WorkItem Checklist 
+and in the Project WorkItem Details sections.
+---------------------------------------------------------------------
+DevLogNumber 15
+2025-09-24 Rene Nel
+"Project Phase 01"
+Available Prepaid Minutes: 90
+
+- For workItem 25, reinstalled mkdocs locally in 
+  powershell in private repo under 
+  python 3.14.7 ('python --version', 'python -m venv venv',
+  '.\venv\Scripts\activate','pip --version',
+  'pip install mkdocs-material','mkdocs new .') (Done)
+
+- For WorkItem 25 ,adjusted newly formed mkdocs file mkdocs.yml
+  with barebones configuration (Done)
+   'site_name: My MkDocs Material Documentation
+  site_url: https://sitename.example
+  theme:
+    name: material'
+
+- For WorkItem 25, run 'mkdocs serve' (Done)
+  'INFO - Building documentation...
+  INFO - Cleaning site directory
+  INFO - Documentation built in 3.67 seconds
+  INFO - [00:19:07] Watching paths for changes: 'docs', 'mkdocs.yml'
+  INFO - [00:19:07] Serving on http://127.0.0.1:8000/'
+
+- For WorkItem 25, confirmed site at given url (Done)
+
+- For WorkItem 25 ,changed heading in mkdocs.yml 
+  to 'Hello Storybook', after 'ctrl+C' to end 
+  local server. And started
+  server again with 'mkdocs serve' (Done)
+
+- We will keep the current private repository 
+  https://github.com/RHowland/gsg-gh-pages-site01.git 
+  for local testing purposes. Rich can decide what 
+  will go into the public repository and/or not.
+
+- For now a simple barebones test to see if the 
+  private git repo project deploys on Rich's local dev environment
+
+- Seems a static repository cannot be deployed correctly on different 
+  dev environment, Rene will push a bat file to the repo to dynamically
+  run mmkdocs when Rich clones/downloads private git repo to his 
+  local dev environment
+
+- On further research it seems repo will require a workaround 
+  using pip freeze - this is to maintain our growing mkdocs.yml file 
+  instead of rewriting it with 'mkdocs new .' and for better management 
+  of our dependencies via greater control as the project grows, see 
+  https://stackoverflow.com/questions/34993200/copy-complete-virtualenv-to-another-pc
+
+- this workaround utilises 
+  'pip freeze > requirements.txt' ,python's equivalent to json. (Done, succesful)
+
+- Rich may run the bat file deploySiteLocally.bat 
+  with the commands batched. However it seems it is till being run 
+  outside the virtual env. Not working (Done, unsuccessful) 
+
+- Soloution for above is to run (Done,unsuccessful)
+  '.\venv\Scripts\activate' followed by '.\deploySiteLocally.bat' 
+  (done, unsuccessful). However now it runs the rest of the script outside 
+  the virtual environment. Not working as intended.
+
+- To finalise WorkItem number 25, Rich may now run 
+   'python -m venv venv' ,
+  '.\venv\Scripts\activate', 
+  'pip install -r requirements.txt',
+  'mkdocs serve' (no need to run 'mkdocs new .') (Done)
+
+- When finished Rich can run ctrl+c and run the command 'deactivate'
+
+- sent upwork message to update Rich on progress
+
+
+
+Minutes Worked in this session: 10  
+Remaining Prepaid Minutes     : 80
+---------------------------------------------------------------------
+- DevLogNumber 20
+  2025-09-27 Rene Nel
+  "Project Phase 01"
+  Available Prepaid Minutes: 80
+
+- WorkItem number 25 ,Tested clone of private repo in vscode terminal 
+  panel and local deployment to Rene's dev environment. 
+  Successfully ran locally deployment using 
+  'python -m venv venv' ,
+  '.\venv\Scripts\activate' , 
+  'pip install -r requirements.txt' ,
+  'mkdocs serve'. VScode terminal panel produced an url callable in 
+   two different browser's (firefox & edge) on 
+   Rene's development environment (Done, successful)
+
+- WorkItem number 25 
+   Rich should run commands 
+  'python -m venv venv' ,
+  '.\venv\Scripts\activate' , 
+  'pip install -r requirements.txt' ,
+  'mkdocs serve' 
+
+- WorkItem number 25 
+  Send upwork message to Rich that he may now try to deploy mkdocs on his 
+  development environment
+
+- WorkItem number 25
+  Richard will let Rene know if deployment was successful or not
+
+- WorkItem number 10, 
+  updated Install Material MKDocs v1.0 by running tests for 
+  linux instructions and finalising windows 10 instructions. 
+  Ask Rich if we should
+  include instructions for Mac. Requires further editing 
+
+- WorkItem number 10.
+  Ask Richard if the work Item numbers in the text file 
+  "Install Material MKDocs v1.0"
+  are related to the devlog work item numbers
+
+Meeting with Rich 10/02/2025: 60
+Minutes Worked in this session: 20  
+Remaining Prepaid Minutes     : 00
+---------------------------------------------------------------------
+DevLogNumber 22
+2025-09-29 Rich Howland
+"Project Phase 01"
+- I ran these 4 commands:  
+  "python -m venv venv" ,
+  ".\venv\Scripts\activate" , 
+  "pip install -r requirements.txt" ,
+  "mkdocs serve"
+
+  ... and entered localhost:8000 in a web browser and the basic MkDocs 
+  page appeared.                                    (DONE Successful) 
+
+  Deployment was successful and I did NOT have to install Material MkDocs. 
+
+-----------------------------------------
+- Rene: thanks for providing the 4 commands in your latest devlog entry!
+        good work. 
+
+- Rene: I like the way that you write your devlog entries: very clear and 
+        easy to understand: very professional!  Thank you. 
+
+------------------------------------------
+- We will NOT create a Mac version of our documentation bacause we 
+  are creating the MMkDocs site for our own use. 
+
+------------------------------------------
+- I have changed the folder structure because ./docs is a 
+  folder that is reserved for Python apps: 
+
+  Renamed this folder: 
+    ./docs  
+  to 
+    ./app-docs
+
+  and I have moved all folders and files to 
+  the app-docs folder EXCEPT for the docs 
+  folder (which is apparently reserved sgfor 
+  use by either MkDocs or Python. 
+
+------------------------------------------
+- I have created a public GitHub repo named "test-site-01"
+  to be used to temporarily test the operations to deploy 
+  the MMkDocs website to the github pages in this repo, 
+  or through the github pages folder in this repo. 
+
+  The PRELIMINARY development steps are: 
+  - delete all folders and files from test-site-01
+    to remove all files from the last deployment session.
+
+  # move all private repo folders and files to the temporary 
+    repo.  
+  - copy the website files to test deployment operations 
+      from:
+        gsg-gh-pages-site01 repo
+      to: 
+        test-site-01
+
+    Caution: do not copy the .venv folder 
+
+
+  # Perform full deploment operations
+  - in test-site-01
+    - rebuild the .venv folder
+
+    - build the website and run it locally to confirm 
+      that the site can still be viewed in development mode.
+
+    - perform the deploy operations as defined in 
+      the Willett Youtube video.
+      - use the raw url provided by github pages to 
+        view the site over the Internet in a web browser
+
+      - Make any code changes as needed to get the full 
+        deployment working correctly.
+
+  # Move all changes back to the private repo.
+  - Copy all new and changed files 
+      from:
+        test-site-01
+      to: 
+        gsg-gh-pages-site01 repo
+
+  - delete all folders and files from test-site-01
+    to remove all files from previous deployment sessions
+---------------------------------------------------------------------
+DevLogNumber 25
+  2025-10-08 Rene Nel
+  "Project Phase 02"
+  Available Prepaid Minutes: 00
+
+  - created a new personal access token on github (done, successful)
+  - cloned repo test-site-01 (done,succesful)
+    'gh repo clone RHowland/test-site-01' (done, successful)
+  - installed 'gh' (github authentication) to modify 
+    public repo of another owner. Run 'choco install gh'
+    with administrator privilages (done, successful)
+  - move all private repo folders and files to the temporary 
+    repo.  
+  - copied the website files to test deployment operations 
+      from:
+        gsg-gh-pages-site01 repo
+      to: 
+        test-site-01
+
+    'cd gsg-gh-pages-site01'  
+    'cp * ..\test-site-01' (do not use cp -r here)
+    'cd docs'
+    'cp * ..\..\test-site-01\docs'  (done, successful)
+
+  - Ran commands to test local deplyment in test-site-01 
+    local git directory.
+    "python -m venv venv" ,
+    ".\venv\Scripts\activate" , 
+    "pip install -r requirements.txt" ,
+    "mkdocs serve" 
+    "deactivate" (done, successful)
+    
+  - Note to make ,if 'mkdocs serve' deploys 
+    a website with a heading but a '404' in the content area,
+    check the 'docs' directory for an index.md file. 
+      
+    - adding github actions file to automate deployment 
+    and future changes to repository
+
+    'mkdir .github/workflows'
+    Create new file with;
+    'notepad .github/workflows/ci.yml'
+    copy and paste contents from 'https://squidfunk.github.io/
+    mkdocs-material/publishing-your-site/#with-github-actions-material-for-mkdocs'
+
+    git add .
+    git commit -m ''
+    git push
+
+   build successful but page not deployed. 
+   Check with Rich if github deploy is activated in settings 
+
+   - remove all files locally and commit changes to repo to empty public repo
+
+   'rm -r *'
+   'git add .'
+   'git commit -m '''
+    git push
+
+   - remove commit history from the public repository
+
+   this is required as simply removing the files from the public repository doesn't
+   remove the commit history,which shows all changes to each file,effectively still 
+   showing most of the files and it's data
+
+   'git rev-list --max-parents=0 HEAD' (this command finds the initial commit hash)
+   'git reset --hard /*put the hash from git rev-list here*/ 
+   'git commit --amend -m "a new,clean initial commit"'    
+   'git push --force origin main'
+
+    Be careful with these particular set of commands as it permanently 
+    rewrites the commit history for a given repository
+
+   - test deployment in public repository which Rene controls.
+     Observation of .gitignore ,thank you for that Rich
+     Repeated all steps above as for test-site-01
+     Deployment online successful 
+     Git history erased
+     Git repository deleted (done,successful)  
+
+   - attempting to change workflow file so it deploys from main branch 
+     (done,unsuccessful)    
+
+   - record brief youtube video to show Rich how to change settings to allow
+     deployment from specific branch (done, successful)
+     
+     Rich please 
+     change profile>settings>pages>deploy from branch>'gh-deploy' for test-site-01 
+     after branch has been created 
+
+     Please Note, NB, Rene will deploy all required docs to test-site-01 before Rich
+     changes the 'deploy from branch' option in settings>pages as shown; 
+
+     https://youtu.be/hCOvwNeaC8Q
+---------------------------------------------------------------------
+DevLogNumber 30
+  2025-10-08 Rene Nel
+  "Project Phase 02"
+  Available Prepaid Minutes: 
+
+  - Rich set up a new repository 'test-site-01-rene' with full admin privileges for Rene.
+    Rene is able to access settings for the test-site-01-rene repo.
+    Thank you Rich.
+
+  - Rene used 'gh repo clone howland-org1/test-site-01-rene'
+
+  - repeating all the appropriate steps from Devlog number 25 for 'test-site-01-rene'
+
+    
+
+
+
+
+---------------------------------------------------------------------
+
+=====================================================================
+(End of DevLog Document)
